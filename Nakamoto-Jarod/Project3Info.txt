@@ -1,0 +1,46 @@
+In an attempt to start communication between group members I present project 3:
+Ideally all data in this project would really be data from your group members. I encourage 
+you guys to get the neccessary info to complete this project. 
+If you are unable to get the info...or don't want to give your real info, make it up.
+
+In project3 you will
+
+Write 3 Classes:
+Group_# (Your group number there)
+GroupMember
+Class
+
+Group_#() 
+has an list filled with GroupMembers*
+	*this list must contain at least 2 groupMembers
+
+will have the following functions:
+1) meet_up(day,time)
+	- takes a day(string..Example "Monday") and time(double...example 12.50 for 12:50pm / 15.0 for 3pm / 3.3 for 3:30am)*
+		*if you would like to format your time another way go for it...just make a note of it in your code
+	- this method will check the GroupMembers Class schedule if the members will be able to meet durring that time.
+	- print the result
+
+2) print_members()
+	-prints all members names, major and schedule
+
+
+
+GroupMember()
+constructor needed parameters: name, major, classSchdule[]
+*classSchedule is a list filled with Class objects
+
+has following functions:
+1)print_schedule
+	prints the members classSchedule
+
+
+Class()
+constructor with 
+	- String department
+	- ints classNumber, startTime and endTime
+	- list meetingDays with Days class occurs
+
+functions:
+1) print_class_info()
+	- returns a string with the values from above /\
