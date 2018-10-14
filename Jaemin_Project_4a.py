@@ -1,5 +1,5 @@
 #constants
-ARRAY_SIZE = 85
+ARRAY_SIZE = 8500
 
 #random ints
 randomList = []
@@ -7,14 +7,15 @@ file = open('randomInts.txt', 'r')
 for line in file.readlines():
     for i in line.split():
         randomList.append(int(i))
+print(randomList)
 
 
-def merge_sort(inList, left, right):
-    if (left < right):
+def merge_sort(randomList, left, right):
+    if left < right:
         mid = (left + (right - 1)) // 2
-        merge_sort(inList, left, mid)
-        merge_sort(inList, mid + 1, right)
-        merge(inList, left, mid, right)
+        merge_sort(randomList, left, mid)
+        merge_sort(randomList, mid+1, right)
+        merge(randomList, left, mid, right)
 
 
 def merge(arr, l, m, r):
@@ -61,7 +62,7 @@ def merge(arr, l, m, r):
         k += 1
 
 dividedList = []
-for i in range (0,ARRAY_SIZE//85):
-  dividedList.append(randomList[i*85:(i + 1)*85])
-  merge_sort(dividedList[i],0,len(dividedList[i])-1)
-  print(dividedList[i])
+for i in range (0,ARRAY_SIZE//500):
+    dividedList.append(randomList[i*500:(i + 1)*500])
+    merge_sort(dividedList[i],0,len(dividedList[i])-1)
+    print(dividedList[i])
